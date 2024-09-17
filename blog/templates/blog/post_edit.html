@@ -1,0 +1,8 @@
+{% extend 'blog/base.html %}
+<h1>New post</h1>
+<form method="POST" class="post-from">
+    {% crsf_token %}
+    {{ from.as_p}}
+    <button type="submit" class="save btn btn btn-default">Save</button>
+</form>
+{% endblock %}
